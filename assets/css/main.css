@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'GT-America-Standard-Regular';
+    font-display: swap;
+    src: url('../fonts/GT-America-Standard-Regular.woff2') format('woff2'),
+         url('../fonts/GT-America-Standard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GT-America-Standard-Medium';
+    font-display: swap;
+    src: url('../fonts/GT-America-Standard-Medium.woff2') format('woff2'),
+         url('../fonts/GT-America-Standard-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GT-America-Mono-Regular';
+    font-display: swap;
+    src: url('../fonts/GT-America-Mono-Regular.woff2') format('woff2'),
+         url('../fonts/GT-America-Mono-Regular.woff') format('woff');
+}
+
+:root {
+    --brand-green: #CDFF2C;
+    --brand-pink: #F1E8E3;
+    --brand-dark-grey: #1D1D1D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'GT-America-Standard-Regular', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "kern" 1, "ss03" 1, "ss05" 1;
+    color: var(--brand-dark-grey);
+}
+
+.container {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.wrap {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+
+    @media (min-width: 64em) {
+        padding-left: 2.1875rem;
+        padding-right: 2.1875rem;
+    }
+}
+
+.wrap--at-large {
+    @media (max-width: 29.9375rem) {
+        padding: 0;
+    }
+}
+
+.page-container {
+    padding-top: 5.75rem;
+
+    @media (min-width: 48rem) {
+        padding-top: 6.375rem;
+    }
+}
+
+::selection {
+    color: #ffffff;
+    background: var(--brand-dark-grey);
+}
+::-moz-selection {
+    color: #ffffff;
+    background: var(--brand-dark-grey);
+}
